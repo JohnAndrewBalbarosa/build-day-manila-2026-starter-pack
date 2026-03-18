@@ -1,0 +1,8 @@
+[project]
+name = "casper-agent-starter"
+version = "0.1.0"
+description = "Starter template for building AI agents in the Casper Studios guessing game"
+requires-python = ">=3.10"
+
+[tool.uv.workspace]
+members = ["core", "api", "agent"]

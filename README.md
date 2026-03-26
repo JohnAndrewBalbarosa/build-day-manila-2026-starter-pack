@@ -49,6 +49,8 @@ Connects to the dashboard’s HTTP API and LiveKit stream. Set these in `.env` (
 - **`API_URL`** — dashboard origin only, e.g. `https://your-app.workers.dev` (no trailing slash).
 - **`TEAM_TOKEN`** — your team’s API key (same as the dashboard `team.api_key`).
 
+The admin must be on the **live** dashboard with the camera publishing to the room (so your agent can subscribe to video).
+
 ```bash
 uv run -m agent --live
 ```

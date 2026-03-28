@@ -1,0 +1,23 @@
+.planning/REQUIREMENTS.md
+  729771f22fea3f16 1-123
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.20",
+  "base_commit_sha": "a51185685114183f0f6ad626378af3a879d439a8",
+  "prompts": {
+    "729771f22fea3f16": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4d465876-bf6e-4e7d-b2df-0f8039521fae",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "abryfs <69842068+abryfs@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 123,
+      "total_deletions": 0,
+      "accepted_lines": 123,
+      "overriden_lines": 0
+    }
+  }
+}

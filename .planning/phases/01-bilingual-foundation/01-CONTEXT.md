@@ -16,7 +16,7 @@ Deliver a working charades agent that: sends preprocessed frames to Gemini 2.5 F
 ### Vision Model
 - **D-01:** Use Gemini 2.5 Flash as the primary (and only, for Phase 1) model — 0.53s TTFT, 215 tok/s, cheapest per frame. Research validated this as the clear speed winner.
 - **D-02:** Use pydantic-ai with BinaryContent to send frames. Pydantic-ai v1.73+ is already installed and supports Gemini natively.
-- **D-03:** Set LLM_API_KEY in .env to a Google Gemini API key. Model string: `google-gla:gemini-2.5-flash`
+- **D-03:** Set GEMINI_API_KEY in .env to a Google Gemini API key (pydantic-ai reads GEMINI_API_KEY, not LLM_API_KEY). Model string: `google-gla:gemini-2.5-flash`
 
 ### Frame Preprocessing
 - **D-04:** Resize frames to 512x512 using PIL `Image.thumbnail()` with LANCZOS resampling before sending

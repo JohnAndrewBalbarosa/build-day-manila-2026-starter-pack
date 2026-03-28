@@ -1,0 +1,27 @@
+agent/pyproject.toml
+  729771f22fea3f16 10-12
+agent/src/agent/prompt.py
+  729771f22fea3f16 1,3-7,12-15,17-20,23-26,28-31,33-41,44-46,48-70,73-75,77-78,81-89,91-108,110-231,233-243,246-412
+.env.example
+  729771f22fea3f16 11-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.20",
+  "base_commit_sha": "8cd543a500d8f067c0e5c269880f25665be34b36",
+  "prompts": {
+    "729771f22fea3f16": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4d465876-bf6e-4e7d-b2df-0f8039521fae",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "abryfs <69842068+abryfs@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 453,
+      "total_deletions": 98,
+      "accepted_lines": 403,
+      "overriden_lines": 0
+    }
+  }
+}

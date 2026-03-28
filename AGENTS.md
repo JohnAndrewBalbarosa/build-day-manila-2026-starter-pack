@@ -50,7 +50,7 @@ async def analyze(frame: Frame) -> str | None:
 ## Practice Mode Tips
 
 1. Point your camera at various objects
-2. Run `uv run -m agent --practice`
+2. Run `uv run -m core.app --practice`
 3. Watch what your agent outputs
 4. Tweak `SYSTEM_PROMPT` and `analyze()` until it reliably identifies things
 5. Try `--fps 2` to see if more frames help your strategy

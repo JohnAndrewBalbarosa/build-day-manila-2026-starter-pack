@@ -35,6 +35,10 @@ async def analyze(frame: Frame) -> str | None:
     This is the core function you should customize. The default
     implementation is a simple placeholder that always skips.
 
+    If you want frame preprocessing such as cropping or person segmentation,
+    do it here or in an agent-local helper that consumes ``Frame``. Keep
+    transport and streaming concerns in ``core``.
+
     Args:
         frame: A Frame with .image (PIL Image) and .timestamp.
 

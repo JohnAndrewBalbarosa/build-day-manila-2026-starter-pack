@@ -28,7 +28,7 @@ An AI-powered charades guessing agent that watches a livestream of a person acti
 - [ ] Adaptive guess threshold — submit guess when confidence exceeds optimal threshold given scoring tradeoff
 - [ ] Negative evidence feedback loop — feed wrong guesses (409 responses) back as "NOT this" constraints
 - [ ] Multi-model strategy — parallel or cascading calls across Gemini Flash (speed), Claude/GPT-4o (accuracy)
-- [ ] Multilingual/cultural prompt engineering — handle Tagalog, Filipino cultural references, non-English answers
+- [ ] Bilingual phrase-level guessing — output English or Tagalog phrases, not just single English words
 - [ ] Optimized frame preprocessing — resize/compress frames for fastest LLM inference without losing signal
 
 ### Out of Scope
@@ -44,11 +44,15 @@ An AI-powered charades guessing agent that watches a livestream of a person acti
 **Competition format:**
 - One person acts out clues on a livestream (charades-style)
 - Multiple sequential actions per clue (e.g., pointy head then swimming = shark)
-- Categories unknown in advance — could span animals, movies, objects, people, actions
-- May include Filipino/Tagalog cultural references, local celebrities, local concepts
+- **Answers can be phrases, not just single words** (e.g., "riding a jeepney", "kumain ng balut")
+- **Answers can be in English OR Tagalog** — bilingual guessing is required
+- Categories unknown in advance — could span animals, movies, objects, people, actions, food, places, events
+- Maps to Pinoy Henyo categories: Bagay/Tao/Lugar/Pangyayari/Pagkain (Object/Person/Place/Event/Food)
+- May include Filipino cultural references, local celebrities, local concepts
 - Teams compete on speed and accuracy (fewer guesses + faster = better score)
 - Max 10 guesses per round; wrong guesses return HTTP 409
 - Judge is likely LLM-based (semantic matching, not exact string) — evidenced by JudgeUnavailable (503) error and retry logic
+- Judge likely handles bilingual matching (e.g., "shark" and "pating" for the same clue)
 
 **Technical environment:**
 - Python 3.10+ UV workspace, 3 packages (core, api, agent)

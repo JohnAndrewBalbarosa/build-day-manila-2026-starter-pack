@@ -7,6 +7,9 @@ dependencies = [
     "core",
     "api",
     "pydantic-ai>=0.1",
+    "pydantic-ai[google]>=0.1",
+    "pydantic-ai[anthropic]>=0.1",
+    "pydantic-ai[openai]>=0.1",
     "python-dotenv>=1.0",
 ]
 

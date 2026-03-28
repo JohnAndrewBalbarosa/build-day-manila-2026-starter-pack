@@ -1,0 +1,31 @@
+.planning/research/FEATURES.md
+  729771f22fea3f16 1-191
+.planning/research/ARCHITECTURE.md
+  729771f22fea3f16 1-790
+.planning/research/SUMMARY.md
+  729771f22fea3f16 1-175
+.planning/research/PITFALLS.md
+  729771f22fea3f16 1-413
+.planning/research/STACK.md
+  729771f22fea3f16 1-437
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.20",
+  "base_commit_sha": "c94554b95bdf2b3f977682fd3b66cd9fc762965b",
+  "prompts": {
+    "729771f22fea3f16": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4d465876-bf6e-4e7d-b2df-0f8039521fae",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "abryfs <69842068+abryfs@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 2006,
+      "total_deletions": 0,
+      "accepted_lines": 2006,
+      "overriden_lines": 0
+    }
+  }
+}

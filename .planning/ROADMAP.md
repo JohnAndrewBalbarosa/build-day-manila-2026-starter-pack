@@ -29,10 +29,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Agent outputs multi-word phrases (not just single words) and can produce guesses in Tagalog when the action fits Filipino context
   4. Frames are visibly preprocessed (resized, compressed) before LLM calls -- raw 1080p frames are never sent
   5. Module-level state persists across analyze() calls (frame count, guess history are maintained between invocations)
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 01-01: TBD
+- [ ] 01-01-PLAN.md -- Complete bilingual charades agent (Gemini 2.5 Flash + preprocessing + Filipino context + SKIP gating + state tracking)
 
 ### Phase 2: Temporal Intelligence
 **Goal**: Agent reasons across sequences of frames instead of treating each frame independently, skips redundant frames via keyframe detection, and feeds wrong-guess feedback into subsequent prompts
@@ -85,7 +85,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Bilingual Foundation | 0/0 | Not started | - |
+| 1. Bilingual Foundation | 0/1 | Planning complete | - |
 | 2. Temporal Intelligence | 0/0 | Not started | - |
 | 3. Confidence Sophistication | 0/0 | Not started | - |
 | 4. Multi-Model Resilience | 0/0 | Not started | - |

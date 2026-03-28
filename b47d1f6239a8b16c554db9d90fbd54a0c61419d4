@@ -1,0 +1,25 @@
+.planning/ROADMAP.md
+  729771f22fea3f16 32,35,88
+.planning/phases/01-bilingual-foundation/01-01-PLAN.md
+  729771f22fea3f16 1-312
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.20",
+  "base_commit_sha": "b47d1f6239a8b16c554db9d90fbd54a0c61419d4",
+  "prompts": {
+    "729771f22fea3f16": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4d465876-bf6e-4e7d-b2df-0f8039521fae",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "abryfs <69842068+abryfs@users.noreply.github.com>",
+      "messages": [],
+      "total_additions": 315,
+      "total_deletions": 3,
+      "accepted_lines": 315,
+      "overriden_lines": 0
+    }
+  }
+}

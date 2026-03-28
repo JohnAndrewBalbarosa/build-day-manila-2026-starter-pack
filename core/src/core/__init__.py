@@ -1,4 +1,9 @@
-"""Core frame capture and streaming utilities for Casper agents."""
+"""Core frame, streaming, and application primitives for Casper agents.
+
+`core` owns the shared `Frame` type, capture/stream utilities, and the
+workspace-level app entrypoint in `core.app`. Guess analysis still lives in
+`agent`, and live-mode HTTP transport still lives in `api`.
+"""
 
 from core.frame import Frame
 from core.practice import start_practice

@@ -153,7 +153,7 @@ def _segment_person_mask_yolo(
     for mask, score in zip(masks, scores, strict=False):
         if float(score) < conf:
             continue
-        merged = np.maximum(merged, (mask > 0.5).astype(np.uint8) * 255)
+        merged = np.maximum(merged, _yolo_mask_to_uint8(mask, size=(w, h)))
 
     if merged.max() == 0:
         return None
@@ -163,6 +163,18 @@ def _segment_person_mask_yolo(
     return pil_mask.filter(ImageFilter.MedianFilter(size=3)).filter(
         ImageFilter.GaussianBlur(radius=1)
     )
+
+
+def _yolo_mask_to_uint8(mask: Any, *, size: tuple[int, int]) -> Any:
+    """Resize a YOLO mask back to the source frame size and binarize it."""
+    import numpy as np
+
+    mask_image = Image.fromarray((mask * 255).astype(np.uint8), mode="L")
+    if mask_image.size != size:
+        mask_image = mask_image.resize(size, resample=Image.Resampling.BILINEAR)
+
+    resized = np.array(mask_image, dtype=np.uint8)
+    return np.where(resized > 127, 255, 0).astype(np.uint8)
 
 
 def _segment_person_mask_grabcut(image: Image.Image) -> Image.Image | None:
